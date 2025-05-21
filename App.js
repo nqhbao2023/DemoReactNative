@@ -3,17 +3,17 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { PaperProvider } from 'react-native-paper';
 import { MyContextControllerProvider } from '../DemoReactNative/KTGK/store/Index';
-import Lab3Screen from '../DemoReactNative/LAB3/store/Lab3Screen';
-import Login from '../DemoReactNative/LAB3/screens/Login';
-import Register from '../DemoReactNative/LAB3/screens/Register';
+// import Lab3Screen from '../DemoReactNative/LAB3/store/Lab3Screen';
+// import Login from '../DemoReactNative/LAB3/screens/Login';
+// import Register from '../DemoReactNative/LAB3/screens/Register';
 // import Home from '../DemoReactNative/LAB3/screens/Home';
-// import FoodList from '../DemoReactNative/KTGK/screens/FoodList';
-// import Cart from '../DemoReactNative/KTGK/screens/Cart';
-// import Login from '../DemoReactNative/KTGK/screens/Login';
-// import Register from '../DemoReactNative/KTGK/screens/Register';
-// import Cuisine from '../DemoReactNative/KTGK/screens/Cuisine';
-// import PaymentSuccess from '../DemoReactNative/KTGK/screens/PaymentSuccess';
-// import ForgotPassword from './KTGK/screens/ForgotPassword';
+import FoodList from '../DemoReactNative/KTGK/screens/FoodList';
+import Cart from '../DemoReactNative/KTGK/screens/Cart';
+import Login from '../DemoReactNative/KTGK/screens/Login';
+import Register from '../DemoReactNative/KTGK/screens/Register';
+import Cuisine from '../DemoReactNative/KTGK/screens/Cuisine';
+import PaymentSuccess from '../DemoReactNative/KTGK/screens/PaymentSuccess';
+import ForgotPassword from './KTGK/screens/ForgotPassword';
 // import MainMenuScreen from './screens/MainMenuScreen';
 // import ListScreen from './screens/ListScreen';
 // import DetailsScreen from './screens/DetailsScreen';
@@ -37,14 +37,14 @@ function App() {
     <PaperProvider>
       <MyContextControllerProvider>
         <NavigationContainer>
-          <Stack.Navigator initialRouteName="Lab3Screen">
-            <Stack.Screen name="Lab3Screen" component={Lab3Screen} options={{ title: 'Lab3Screen' }} />
+          <Stack.Navigator initialRouteName="Login">
+            <Stack.Screen name="Cuisine" component={Cuisine} options={{ title: 'Cuisine' }} />
               <Stack.Screen name="Login" component={Login} options={{ title: 'Login' }} />
-              {/* <Stack.Screen name="ForgotPassword" component={ForgotPassword} options={{ title: 'ForgotPassword' }} /> */}
+              <Stack.Screen name="ForgotPassword" component={ForgotPassword} options={{ title: 'ForgotPassword' }} />
               <Stack.Screen name="Register" component={Register} options={{ title: 'Register' }} />
-              {/* <Stack.Screen name="FoodList" component={FoodList} options={{ title: 'Danh sách món ăn' }} />
-              <Stack.Screen name="Cart" component={Cart} options={{ title: 'Giỏ hàng' }} /> */}
-              {/* <Stack.Screen name="PaymentSuccess" component={PaymentSuccess} options={{ title: 'Thanh toán thành công' }} /> */}
+              <Stack.Screen name="FoodList" component={FoodList} options={{ title: 'Danh sách món ăn' }} />
+              <Stack.Screen name="Cart" component={Cart} options={{ title: 'Giỏ hàng' }} />
+              <Stack.Screen name="PaymentSuccess" component={PaymentSuccess} options={{ title: 'Thanh toán thành công' }} />
           </Stack.Navigator>
         </NavigationContainer>
       </MyContextControllerProvider>
